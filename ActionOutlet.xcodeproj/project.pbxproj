@@ -14,6 +14,7 @@
 		C950DBDF1E3DAE5C00698599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C950DBDD1E3DAE5C00698599 /* LaunchScreen.storyboard */; };
 		C950DBEA1E3DAE5C00698599 /* ActionOutletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950DBE91E3DAE5C00698599 /* ActionOutletTests.swift */; };
 		C950DBF51E3DAE5C00698599 /* ActionOutletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950DBF41E3DAE5C00698599 /* ActionOutletUITests.swift */; };
+		C950DC3F1E3DD1E900698599 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950DC3E1E3DD1E900698599 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C950DBF01E3DAE5C00698599 /* ActionOutletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionOutletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C950DBF41E3DAE5C00698599 /* ActionOutletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionOutletUITests.swift; sourceTree = "<group>"; };
 		C950DBF61E3DAE5C00698599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C950DC3E1E3DD1E900698599 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				C950DBDB1E3DAE5C00698599 /* Assets.xcassets */,
 				C950DBDD1E3DAE5C00698599 /* LaunchScreen.storyboard */,
 				C950DBE01E3DAE5C00698599 /* Info.plist */,
+				C950DC3E1E3DD1E900698599 /* SettingsViewController.swift */,
 			);
 			path = ActionOutlet;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				C950DBD71E3DAE5C00698599 /* ViewController.swift in Sources */,
 				C950DBD51E3DAE5C00698599 /* AppDelegate.swift in Sources */,
+				C950DC3F1E3DD1E900698599 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +507,7 @@
 				C950DBFB1E3DAE5C00698599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C950DBFC1E3DAE5C00698599 /* Build configuration list for PBXNativeTarget "ActionOutletTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				C950DBFE1E3DAE5C00698599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C950DBFF1E3DAE5C00698599 /* Build configuration list for PBXNativeTarget "ActionOutletUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				C950DC011E3DAE5C00698599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
