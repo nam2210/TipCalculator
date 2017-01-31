@@ -12,7 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var startTime : Int64 = 0;
+    var isReset : Bool = false;
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -27,10 +28,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        print("app enter background");
+        let timeInMilliseconds = Date().timeIntervalSince1970
+        startTime = Int64(timeInMilliseconds * 1000)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        print("app enter foreground");
+        let timeInMilliseconds = Date().timeIntervalSince1970
+        let duration = (Int64(timeInMilliseconds * 1000) - startTime) / (1000);
+        print("duration:  \(duration)");
+        if (duration > (10 * 60)){
+            isReset = true;
+            var myViewController : ViewController!
+            if let viewControllers = self.window?.rootViewController?.childViewControllers {
+                for viewController in viewControllers {
+                    if viewController.isKind(of: ViewController.self) {
+                        myViewController = viewController as! ViewController
+                        print("Found the view controller");
+                        myViewController.updateValue();
+                    }
+                }
+            }
+            
+        }
+        
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
