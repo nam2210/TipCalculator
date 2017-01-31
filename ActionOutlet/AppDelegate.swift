@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     if viewController.isKind(of: ViewController.self) {
                         myViewController = viewController as! ViewController
                         print("Found the view controller");
-                        myViewController.updateValue();
+                        myViewController.reset();
                     }
                 }
             }

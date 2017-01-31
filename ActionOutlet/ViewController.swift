@@ -84,7 +84,17 @@ class ViewController: UIViewController {
     let tipPercentage = [0.18, 0.2, 0.25];
     
     func updateValue(){
-        print("refresh value")
+        let value = UserDefaults.standard.value(forKey: "INDEX");
+        let bill = Double(txtFieldBill.text!) ?? 0;
+        let tip = bill * tipPercentage[value as! Int];
+        let total = bill + tip;
+        
+        
+        lblTip.text = formatCurrencyByLocale(value: tip);
+        lblTotal.text = formatCurrencyByLocale(value: total);
+    }
+    
+    func reset(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         var v : String;
         if(appDelegate.isReset){
@@ -95,20 +105,10 @@ class ViewController: UIViewController {
             } else {
                 v = "0";
             }
-            
-            
         }
         
         txtFieldBill.text = v;
-        let value = UserDefaults.standard.value(forKey: "INDEX");
-        let bill = Double(v) ?? 0;
-        let tip = bill * tipPercentage[value as! Int];
-        let total = bill + tip;
-        
-        
-        lblTip.text = formatCurrencyByLocale(value: tip);
-        lblTotal.text = formatCurrencyByLocale(value: total);
-        
+        updateValue()
     }
     
     
